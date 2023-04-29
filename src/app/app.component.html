@@ -1,0 +1,63 @@
+<!-- <div class="container">
+  <div class="row">
+   
+    <div class="col-md-4">
+      <div class="card">
+        <p>{{title|sumary}}</p>
+        
+
+      </div>
+      <div class="card-header">
+        <p>{{title|sumary:100}}</p>
+        <p>{{title|sumary}}</p>
+      </div>
+
+      <div class="card-body">
+        <p>{{title|sumary:300}}</p>
+      </div>
+    </div>
+  </div> -->
+<!-- </div> -->
+
+
+
+
+<div class="container">
+  <div class="row">
+    <input type="text" [(ngModel)]="seachtext" class="form-control" placeholder="search on">
+    
+</div>
+</div>
+
+
+<table class="table table-bordred">
+  <thead>
+    <tr>
+      <th>sr</th>
+      <th>fname</th>
+      <th>team</th>
+      <th>role</th>
+      <th>age</th>
+      <th>matchesPlayed</th>
+      <th>totalRuns</th>
+      <th>totalWickets</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of player |demo : seachtext;index as i">
+      <td>{{i+1}}</td>
+      <td>{{post.name}}</td>
+      <td>{{post.country}}</td>
+      <td>{{post.role}}</td>
+      <td>{{post.age}}</td>
+      <td>{{post.matchesPlayed}}</td>
+      <td>{{post.totalRuns}}</td>
+      <td>{{post.totalWickets}}</td>
+    </tr>
+  </tbody>
+   
+</table>
+
+<ul *ngFor="let post of array">i love {{array}}
+  <li ></li>
+</ul>
